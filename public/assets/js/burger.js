@@ -22,7 +22,12 @@ $(function() {
 
 
   $(".devour").on("click", function(event) {
+    
+    // $(this).remove();
+    
     var id = $(this).attr("id");
+
+    
 
     // var newDevour = $(this).data("newdevour");
   
@@ -39,6 +44,10 @@ $(function() {
       // Reload the page to get the updated list
       location.reload();
     });
+
+    
+
+
   });
 
 

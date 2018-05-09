@@ -45,9 +45,11 @@
         <div class="col-md-4">
 
             {{#each burgers}}
+             {{#unless devoured}}
                 <button id="{{id}}" type="button" class="btn btn-secondary btn-sm devour" data-newdevour="{{devoured}}">Devour it!</button>
                 <br>
                 <br> 
+                {{/unless}}
             {{/each}}
 
 
