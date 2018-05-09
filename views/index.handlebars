@@ -43,9 +43,10 @@
         <div class="col-md-4">
 
             {{#each burgers}}
-            <button id="{{id}}" type="button" class="btn btn-secondary btn-sm">Devour it!</button>
+            <button id="{{id}}" type="button" class="btn btn-secondary btn-sm devour" data-newdevour="{{devoured}}">Devour it!</button>
             <br><br>
             {{/each}}
+
 
         </div>
 
