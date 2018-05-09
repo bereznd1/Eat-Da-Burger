@@ -24,10 +24,10 @@ $(function() {
   $(".devour").on("click", function(event) {
     var id = $(this).attr("id");
 
-    var newDevour = $(this).data("newdevour");
+    // var newDevour = $(this).data("newdevour");
   
     var newDevouredState = {
-      devoured: newDevour
+      devoured: 1
     };
 
     // Send the DELETE request.
@@ -35,7 +35,7 @@ $(function() {
       type: "PUT",
       data: newDevouredState
     }).then(function() {
-      console.log("changed devoured state to", newDevour);
+      // console.log("changed devoured state to", newDevour);
       // Reload the page to get the updated list
       location.reload();
     });

@@ -28,10 +28,12 @@
 
         <div class="col-md-4">
 
-            {{#each burgers}}
-            <div class="well">
-                {{id}}. {{burger_name}}
-            </div>
+            {{#each burgers}} 
+                {{#unless devoured}}
+                    <div class="well">
+                        {{id}}. {{burger_name}}
+                    </div>
+                {{/unless}}
             {{/each}}
 
 
@@ -43,16 +45,26 @@
         <div class="col-md-4">
 
             {{#each burgers}}
-            <button id="{{id}}" type="button" class="btn btn-secondary btn-sm devour" data-newdevour="{{devoured}}">Devour it!</button>
-            <br><br>
+                <button id="{{id}}" type="button" class="btn btn-secondary btn-sm devour" data-newdevour="{{devoured}}">Devour it!</button>
+                <br>
+                <br> 
             {{/each}}
 
 
         </div>
 
 
-        <div class="col-md-6">
+        <div class="col-md-4">
 
+            {{#each burgers}} 
+                {{#if devoured}} 
+
+                     <div class="well">
+                        {{id}}. {{burger_name}}
+                    </div>
+                    {{!-- {{> cats/cat-block sleep=false}}  --}}
+                {{/if}} 
+            {{/each}}
 
 
         </div>

@@ -39,6 +39,9 @@ function objToSql(ob) {
   return arr.toString();
 }
 
+
+
+
 // Object for all our SQL statement functions.
 var orm = {
   selectAll: function(tableInput, cb) {
@@ -80,7 +83,7 @@ var orm = {
     queryString += " WHERE ";
     queryString += condition;
 
-    console.log("0rmjs" + queryString);
+    console.log("Ormjs " + queryString);
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
