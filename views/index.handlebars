@@ -4,7 +4,7 @@
 
         <div class="col-md-8 col-md-offset-2">
 
-            <img src="../public/assets/img/burger.png">
+            <img src="public\assets\img\burger.png">
 
             <h2>Eat-Da-Burger!</h2>
 
@@ -13,7 +13,8 @@
 
     </div>
 
-    {{!-- <ul>
+    {{!--
+    <ul>
         {{#each cats}} {{#unless sleepy}} {{> cats/cat-block sleep=true}} {{/unless}} {{/each}}
     </ul>
 
@@ -23,6 +24,40 @@
         {{#each cats}} {{#if sleepy}} {{> cats/cat-block sleep=false}} {{/if}} {{/each}}
     </ul> --}}
 
+    <div class="row">
+
+        <div class="col-md-4">
+
+            {{#each burgers}}
+            <div class="well">
+                {{id}}. {{burger_name}}
+            </div>
+            {{/each}}
+
+
+
+
+        </div>
+
+
+        <div class="col-md-4">
+
+            {{#each burgers}}
+            <button id="{{id}}" type="button" class="btn btn-secondary btn-sm">Devour it!</button>
+            <br><br>
+            {{/each}}
+
+        </div>
+
+
+        <div class="col-md-6">
+
+
+
+        </div>
+
+
+    </div>
 
 
 
