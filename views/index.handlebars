@@ -1,5 +1,7 @@
+<!--Bootstrap container-->
 <div class="container">
 
+    <!--Header-->
     <div class="row">
 
         <div class="col-md-4">
@@ -16,7 +18,6 @@
 
             <br><br>
 
-
         </div>
 
 
@@ -27,51 +28,61 @@
     </div>
 
 
+    <!--Row for displaying the bugers-->
     <div class="row">
 
+        <!--Displays the un-devoured burgers & their corresponding "Devour it!" buttons-->
         <div class="col-md-6">
 
             <h4><strong>Still Available</strong></h4>
 
+            <!--For each item in the burgers array... -->
             {{#each burgers}} 
+
+                <!--If that burger is NOT devoured... -->
                 {{#unless devoured}}
+
+                    <!--Create a Bootstrap "well" that holds that burger's ID & name-->
                     <div class="well undevoured">
                         {{id}}. {{burger_name}}
                     </div>
 
+                    <!--Create a "Devour it!" button next to the burger well with the ID of that button being the burger's ID, & also assign the button the devoured status of that burger-->
                     <button id="{{id}}" type="button" class="btn btn-secondary btn-sm devour" data-newdevour="{{devoured}}"><strong>Devour it!</strong></button>
                 {{/unless}}
             {{/each}}
         </div>
 
-
-
+        <!--Displays the devoured burgers-->
         <div class="col-md-6">
 
             <h4><strong>Devoured</strong></h4>
 
+            <!--For each item in the burgers array... -->            
             {{#each burgers}} 
+
+                <!--If that burger was devoured... -->
                 {{#if devoured}} 
 
+                    <!--Create a Bootstrap "well" that holds that burger's ID & name-->
                      <div class="well">
                         {{id}}. {{burger_name}}
                     </div>
                 {{/if}} 
             {{/each}}
 
-
         </div>
-
 
     </div>
 
 
-
+    <!--Row for displaying the submit textbox & submit button that adds a new buger to the DB-->
     <div class="row">
+
         <div class="col-md-3">
 
-
         </div>
+
 
         <div class="col-md-6">
 
@@ -92,13 +103,12 @@
 
         </div>
 
+
         <div class="col-md-3">
 
 
         </div>
 
     </div>
-
-
 
 </div>

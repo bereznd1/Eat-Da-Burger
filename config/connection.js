@@ -1,4 +1,4 @@
-// Set up MySQL connection.
+//Sets up MySQL connection
 var mysql = require("mysql");
 
 var connection = mysql.createConnection({
@@ -8,7 +8,7 @@ var connection = mysql.createConnection({
   database: "burgers_db"
 });
 
-// Make connection.
+//Makes the connection
 connection.connect(function(err) {
   if (err) {
     console.error("error connecting: " + err.stack);
@@ -17,5 +17,5 @@ connection.connect(function(err) {
   console.log("connected as id " + connection.threadId);
 });
 
-// Export connection for our ORM to use.
+//Exports connection for our ORM to use.
 module.exports = connection;
