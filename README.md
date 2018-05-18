@@ -9,7 +9,7 @@
 The **Express/MySQL/Handlebars "Eat-Da-Burger" App** uses the **MVC** design pattern & a homemade **ORM** to store various types of burgers inside a database. These burgers are either uneaten, or have already been devoured. The ones that are uneaten appear on the left side of the screen when the app is loaded, with a button next to each that says "Devour It!", and the already-devoured ones appear on the right side. When a user clicks a "Devour It!" button, the "devoured" property of that burger's record in the database is changed to "true", which is what causes it to move to the "devoured" section. Users can submit the name of a new burger and it will appear on the left side, which is labeled "Still Available".
 
 
-## How This Was Achieved
+## How This Was Achieved   
 
 Two initial files needed to be set up before working on the rest of the app. The first file is the *"connection.js"* file, which creates the **MySQL** connection to the burgers database & exports it for use by other files. The second file is the *"server.js"* file, which sets up all the **NPM Package** dependencies, activates the **ExpressJS** server, & requires the *"burger_controller.js"* in order to use its **API** routes. 
 
